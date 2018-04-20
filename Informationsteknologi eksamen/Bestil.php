@@ -1,23 +1,15 @@
 <?php
 
-include '..\connect.php';
-//include '..\UploadFile\saveimage.php';
+include 'connect.php';
 
-if (isset($_POST['indsaet'])) {
-    //UploadImage($_FILES);
-	$fornavnFromForm = $_POST['fornavnFromForm'];
-	$efternavnnameFromForm = $_POST['efternavnFromForm'];
-	$titel = $_POST['titel'];
-	$broedtext = $_POST['broedtext'];
-	$dag = date('d');
-	$maaned = date('m');
-    $aar = date('y');
-    
-
-	$mysqli->query("INSERT INTO $table2_db (fornavn, efternavn, titel, broedtext, dag, maaned, aar) VALUES ('$fornavnFromForm', '$efternavnnameFromForm', '$titel', '$broedtext', '$dag', '$maaned', '$aar')");
+if (isset($_POST['submit'])) {
+	$email = $_POST['inputEmail'];
+	$password = $_POST['inputPassword'];
+    $remember = $_POST['remember-me'];
 }
 
 $mysqli->close();
+?>
 <html lang="en">
 
 <head>
@@ -77,14 +69,14 @@ $mysqli->close();
                 <h2 class="form-signin-heading mt-4">Log venligst ind</h2>
                 <label for="inputEmail" class="sr-only">Email adresse</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email adresse" required autofocus>
-                <label for="inputPassword" class="sr-only">Password</label>
+                <label for="inputPassword" class="sr-only">Adgangskode</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Adgangskode" required>
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" value="remember-me"> Husk mig
                   </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Log ind</button>
               </form>
         
            </div>
