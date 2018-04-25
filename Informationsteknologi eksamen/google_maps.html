@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var vejle = {lat: 55.708, lng: 9.536}; //vejle
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: vejle
+        });
+        var langenæs = {lat: 55.706841, lng: 9.536572}; //Langenæs
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: langenæs
+        });
+        var marker = new google.maps.Marker({
+          position: vejle,
+          map: map
+        });
+        var marker = new google.maps.Marker({
+          position: langenæs,
+          map: map
+          title: 'Langenes bageri'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeoA3gFFixgZ-kh-gMtSpAxrnKyIOyV1E&callback=initMap">
+    </script>
+  </body>
+</html>

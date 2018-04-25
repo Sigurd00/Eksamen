@@ -5,7 +5,7 @@ include 'connect.php';
 if (isset($_POST['submit'])) {
 	$email = $_POST['inputEmail'];
 	$password = $_POST['inputPassword'];
-    $remember = $_POST['remember-me'];
+  $remember = $_POST['remember-me'];
 }
 
 $mysqli->close();
