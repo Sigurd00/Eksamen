@@ -3,7 +3,7 @@ include 'connect.php';
 session_start();
 echo("<br>");
 if($_GET['info'] == "nologin"){
-  echo("");
+  echo("Du er blevet omstillet til log ind siden da du skal logge ind for at kunne bestille");
 }
 
 if (isset($_POST['submit'])) {
@@ -72,6 +72,9 @@ if (isset($_POST['submit'])) {
               <li class="nav-item">
                 <a class="nav-link" href="registrer.php">Registrer</a>
               </li>
+              <li class="nav-item">
+              <a class="nav-link" href="bestil.php">Bagere i nærheden</a>
+            </li>
             </ul>
           </div>
         </div>

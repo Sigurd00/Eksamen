@@ -55,6 +55,10 @@ $mysqli->close();
                 <a class="nav-link" href="registrer.php">Registrer</a>
                 <span class="sr-only">(current)</span>
               </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="bestil.php">Bagere i nærheden</a>
+                <span class="sr-only">(current)</span>
+              </li>
             </ul>
           </div>
         </div>

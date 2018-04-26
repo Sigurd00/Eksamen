@@ -1,9 +1,4 @@
 <?php
-//if (session_status() == PHP_SESSION_NONE) {
-//  echo "<p> Log venligst ind: <br>
-//    <a href=\"log_ind.php\" class=\"btn btn-default btn-lg active\" role=\"button\">Gå til log in side</a>";
-//    exit;
-//}
 if($_SESSION['login_user'] == ""){
   header("Location: log_ind.php?info=nologin");
 }
@@ -38,7 +33,7 @@ if($_SESSION['login_user'] == ""){
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="index.html">Bagere i nærheden
                   <span class="sr-only">(current)</span>
                 </a>
@@ -49,9 +44,10 @@ if($_SESSION['login_user'] == ""){
               <li class="nav-item">
                 <a class="nav-link" href="registrer.php">Bestil</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="bestil.php">Kontakt os</a>
-              </li>
+              <li class="nav-item active">
+              <a class="nav-link" href="bestil.php">Bagere i nærheden</a>
+              <span class="sr-only">(current)</span>
+            </li>
             </ul>
           </div>
         </div>
