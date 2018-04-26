@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if($_GET['info'] == "login"){
+    echo("<br>Du er nu logget ind og kan se bagere i nærheden");
+  }
+?>
 <html lang="en">
 
   <head>
@@ -31,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Hjem
+              <a class="nav-link" href="index.php">Hjem
                 <span class="sr-only">(current)</span>
               </a>
             </li>

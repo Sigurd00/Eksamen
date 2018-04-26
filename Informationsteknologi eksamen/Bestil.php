@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_SESSION['login_user'] == ""){
   header("Location: log_ind.php?info=nologin");
 }
@@ -34,12 +35,7 @@ if($_SESSION['login_user'] == ""){
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Bagere i nærheden
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Hjem</a>
+                <a class="nav-link" href="index.php">Hjem</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="registrer.php">Bestil</a>

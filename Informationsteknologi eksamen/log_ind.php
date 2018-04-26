@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
       
       $_SESSION['login_user'] = $myemail;
       
-      header("Location: index.html");
+      header("Location: index.php?info=login");
    }else {
       echo("Dit log ind navn eller din adgangskode er forkert, prøv venligst igen");
    }
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Hjem
+                <a class="nav-link" href="index.php">Hjem
                 </a>
               </li>
               <li class="nav-item active">
