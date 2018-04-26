@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
       
       $_SESSION['login_user'] = $myemail;
       
-      header("Location: index.php");
+      header("Location: index.html");
    }else {
       echo("Dit log ind navn eller din adgangskode er forkert, prøv venligst igen");
    }
