@@ -4,6 +4,9 @@
 //    <a href=\"log_ind.php\" class=\"btn btn-default btn-lg active\" role=\"button\">Gå til log in side</a>";
 //    exit;
 //}
+if($_SESSION['login_user'] == ""){
+  header("Location: log_ind.php?info=nologin");
+}
 ?>
 <html lang="en">
 

@@ -1,32 +1,39 @@
 <?php
-    include 'connect.php';
-    session_start();
-    $username=$password="";
+include 'connect.php';
+session_start();
+echo("<br>");
+if($_GET['info'] == "nologin"){
+  echo("");
+}
 
+if (isset($_POST['submit'])) {
+  
+   // username and password sent from form 
+   
+   $myemail = $_POST['inputEmail'];
+   $mypassword = $_POST['inputPassword']; 
+   
+   $sql = "SELECT id FROM eksamen_users WHERE email = '$myemail' AND password = '$mypassword'";
+   $result = $mysqli->query($sql);
+  $count = $result->num_rows;
+   
+   // If result matched $myusername and $mypassword, table row must be 1 row
+     
+   if($count == 1) {
+      
+      $_SESSION['login_user'] = $myemail;
+      
+      header("Location: index.php");
+   }else {
+      echo("Dit log ind navn eller din adgangskode er forkert, prøv venligst igen");
+   }
+}
 
-    if (isset($_POST['submit'])) {
-      $username = $_POST['inputUsername'];
-	    $password = $_POST['inputPassword'];
-        
-    }
-    
-    if($username != ""){
-        $res = $mysqli->query("SELECT id, email, password FROM $table_5 WHERE email='$username'");
-        $row = mysqli_fetch_array($res);
-        $count = mysqli_num_rows($res); 
-    
-        if( $count == 1 && $row['password']==$password ) {
-         $_SESSION['user'] = $row['id'];
-         
-         header("Location: bestil.php");
-        } else {
-         echo "WRONG!!!";
-        }
-    }
-    echo $mysqli->error;
 ?>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +51,7 @@
 </head>
 
 
-    <body>
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" style="color: white;">Bager Bestillingen</a>
@@ -58,8 +65,8 @@
                 <a class="nav-link" href="index.html">Hjem
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="log_ind.php">Log ind</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="log_ind.php">Log ind</a>
                 <span class="sr-only">(current)</span>
               </li>
               <li class="nav-item">
@@ -69,6 +76,7 @@
           </div>
         </div>
       </nav>
+
       <div class="row justify-content-center"></div>
           <div class="col-sm-6">
             
@@ -80,7 +88,7 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Adgangskode" name="inputPassword" required>
                 <button class="btn btn-lg btn-primary btn-block" id="submit" type="submit" name="submit">Log ind</button>
               </form>
-              <p> Har du ikke en bruger, så registrer dig her:</p>
+              <p> Har du ikke en bruger? Så registrer her </p>
               <a href="log_ind.php" class="btn btn-default btn-lg active" role="button">Registrer</a>
            </div>
         </div>
