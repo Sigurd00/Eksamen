@@ -58,7 +58,7 @@ if($_SESSION['login_user'] == ""){
           <p>
           <div class="form-group">
           <form method="post">
-          <label for="liste">Select list:</label>
+          <label for="liste">Vælg by:</label>
             <select class="form-control" id="liste" name="by">
               <option value="Vejle">Vejle</option>
               <option value="Jelling">Jelling</option>
@@ -78,11 +78,11 @@ if($_SESSION['login_user'] == ""){
             echo "
               <address>
                 <strong>Bagere i nærheden</strong>
-                <br>Langenæs Bageri, Vejle
-                <br>Palles Bageri, Vejle
-                <br>Lagkagehuset, Vejle
-                <br>Ødsted Bageri, Vejle
-                <br>P.a. Andersen & Sønner, Vejle
+                <br><a href=\"http://www.langenaesbageriet.dk/langenaes-bageriet-vejle/\">Langenæs Bageri, Vejle</a>
+                <br><a href=\"http://www.pallesbageri.dk/index.php?sideid=103&hovedsideid=10\">Palles Bageri, Vejle</a>
+                <br><a href=\"https://lagkagehuset.dk/butikker\">Lagkagehuset, Vejle</a>
+                <br><a href=\"https://lagkagehuset.dk/butikker\">Ødsted Bageri, Vejle</a>
+                <br><a href=\"http://www.vindinggaardcenter.dk/PaKringleriet.html\">P.a. Andersen & Sønner, Vejle</a>
                 <br>og mange flere
               </address>";
             }
@@ -90,11 +90,11 @@ if($_SESSION['login_user'] == ""){
             echo "
               <address>
                 <strong>Bagere i nærheden</strong>
-                <br>Langenæs Bageri, Vejle
-                <br>Palles Bageri, Vejle
-                <br>Lagkagehuset, Vejle
-                <br>Ødsted Bageri, Vejle
-                <br>P.a. Andersen & Sønner, Vejle
+                <br><a href=\"http://www.langenaesbageriet.dk/langenaes-bageriet-vejle/\">Langenæs Bageri, Vejle</a>
+                <br><a href=\"http://www.pallesbageri.dk/index.php?sideid=103&hovedsideid=10\">Palles Bageri, Vejle</a>
+                <br><a href=\"https://lagkagehuset.dk/butikker\">Lagkagehuset, Vejle</a>
+                <br><a href=\"https://lagkagehuset.dk/butikker\">Ødsted Bageri, Vejle</a>
+                <br><a href=\"http://www.vindinggaardcenter.dk/PaKringleriet.html\">P.a. Andersen & Sønner, Vejle</a>
                 <br>og mange flere
               </address>";
               }

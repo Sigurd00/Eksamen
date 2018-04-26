@@ -73,19 +73,29 @@ if($_GET['info'] == "login"){
           <h2 class="mt-4">Bestilling af varer</h2>
           <p>Det er nu muligt at bestille dit brød hjemmefra!</p>
           <p>Find de bedste tilbud først og så kan du bestille ved blot et klik.</p>
-          <p>
+          <p>Husk også at tjekke de nyeste nyheder for ekstra information om dine bagere</p>
             <a class="btn btn-primary btn-lg" href="bestil.php">Bestil &raquo;</a>
-          </p>
+          
+            <br><br><br><br><br><br>
           <h2>Nyheder fra bagerierne</h2>
         </div>
         <div class="col-sm-4">
-          <h2 class="mt-4">Find din bager</h2>
-          <address>
-            <strong>Bagere i nærheden</strong>
-            <br>Langenæs Bageri, Vejle
-            <br>Lagkagehuset, Vejle
+          <adress>
             <br>
-          </address>
+            <h4>Kontakt os på</h4>
+            <p>Email: Bagerbestillingen@support.dk</p>
+            <p>Telefon: +4520432159</p>
+            <h4>Bager teamet</h4>
+            <div class="row">
+              <div class="column">
+                <img src="images/Urup.jpg" alt="" style="height: 150px; width: 115px; padding: 10px;">
+               <h6> &#160; Jonas Urup</h6>
+              </div>
+              <div class="column">
+                <img src="images/Sigurd.jpg" alt="" style="height: 150px; width: 115px; padding: 10px;">
+                <h6> &#160; Jacob Skadborg</h6>
+              </div>
+            </div>
         </div>
       </div>
       <!-- /.row -->
@@ -105,30 +115,34 @@ if($_GET['info'] == "login"){
         </div>
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="" style="height: 230px; width: 348px;" alt="">
+            <img class="card-img-top" src="images/pallesbageri.png" style="height: 230px; width: 348px;" alt="">
             <div class="card-body">
-              <h4 class="card-title">Titel</h4>
-              <p class="card-text">Tekst</p>
+              <h4 class="card-title">Nybagt brød i Palles Bageri, Vejle</h4>
+              <p class="card-text">Der er netop kommet nyt nybagt brød i Palles Bageri så tjek ind imens det stadig er lunt!</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+              <a href="http://pallesbageri.dk/" class="btn btn-primary">Besøg Palles Bageri</a>
             </div>
           </div>
         </div>
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="" style="height: 230px; width: 348px;" alt="">
-            <h4 class="card-title">Titel</h4>
-              <p class="card-text">Tekst</p>
+            <img class="card-img-top" src="https://files.guidedanmark.org/files/464/138135_Humble_Bageri_1.jpg.jpg?qfix" style="height: 230px; width: 348px;" alt="">
+            <br>
+            <h4 class="card-title">Nytorvs bageri i Give længere åbent</h4>
+              <p class="card-text">Nytorvs bageri har åbent fra 06:00 til 18:00 på mandag!</p>
               <div class="card-body">
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+              <a href="http://nytorvsbageri.dk/" class="btn btn-primary">Besøg Nytorvs Bageri</a>
             </div>
           </div>
         </div>
 
       </div>
+      <!-- /.row -->
+
+    </div>
       <!-- /.row -->
 
     </div>

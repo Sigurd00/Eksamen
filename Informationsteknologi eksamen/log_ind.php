@@ -8,25 +8,28 @@ if($_GET['info'] == "nologin"){
 
 if (isset($_POST['submit'])) {
   
-   // username and password sent from form 
+  // email og password sendt from form 
    
-   $myemail = $_POST['inputEmail'];
-   $mypassword = $_POST['inputPassword']; 
+  $myemail = $_POST['inputEmail'];
+  $mypassword = $_POST['inputPassword']; 
    
-   $sql = "SELECT id FROM eksamen_users WHERE email = '$myemail' AND password = '$mypassword'";
-   $result = $mysqli->query($sql);
+  $sql = "SELECT id FROM eksamen_users WHERE email = '$myemail' AND password = '$mypassword'";
+  $result = $mysqli->query($sql);
   $count = $result->num_rows;
    
-   // If result matched $myusername and $mypassword, table row must be 1 row
+  // Hvis $count er 1 så må der være en email der passer til
+  // Hvis det er mere end 1 så er der tydeligvis noget galt.
+  // Da vi ikke har gjort at man ikke må have en email som er identisk med en anden så lad for guds skyld være med at bruge den samme email 2 gange. DET VILLE RESULTERE I TOTAL DESTRUCTION
      
-   if($count == 1) {
+  if($count == 1) {
       
-      $_SESSION['login_user'] = $myemail;
+    $_SESSION['login_user'] = $myemail;
       
-      header("Location: index.php?info=login");
-   }else {
-      echo("Dit log ind navn eller din adgangskode er forkert, prøv venligst igen");
-   }
+    header("Location: index.php?info=login");
+    //Man er logget ind.
+  }else {
+    echo("Dit log ind navn eller din adgangskode er forkert, prøv venligst igen");
+  }  
 }
 
 ?>
